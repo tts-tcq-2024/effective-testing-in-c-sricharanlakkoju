@@ -3,11 +3,13 @@
 
 int alertFailureCount = 0;
 
+//fake dependency - dumb
 int networkAlertStub(float celcius) {
    printf("ALERT: Temperature is %.1f celcius.\n", celcius);
    return 500;
 }
 
+//fake dependency - Intelligent , records interaction
 int networkAlertCallCount=0;
 float networkAlertArg;
 int networkAlert_mock(float celcius) {
